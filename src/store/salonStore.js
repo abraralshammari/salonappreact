@@ -8,7 +8,7 @@ class SalonStore {
   //   fetchCategory = async () => {
   //     try {
   //       const response = await axios.get("http://localhost:8000");
-  //       this.instructorInfo = response.data;
+  //       this.category = response.data;
   //     } catch (error) {
   //       console.error("fetchCategory  -> response", error);
   //     }
@@ -40,5 +40,7 @@ class SalonStore {
 }
 
 const salonStore = new SalonStore();
+
+// salonStore.fetchCategory();
 
 export default salonStore;
