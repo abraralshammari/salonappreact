@@ -72,6 +72,9 @@ class SalonStore {
 
 const salonStore = new SalonStore();
 
+// salonStore.fetchCategory();
+
 // salonStore.fetchUser();
+
 
 export default salonStore;
