@@ -41,4 +41,6 @@ class SalonStore {
 
 const salonStore = new SalonStore();
 
+// salonStore.fetchUser();
+
 export default salonStore;
