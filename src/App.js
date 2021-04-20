@@ -1,6 +1,10 @@
 import React from "react";
+//import user_add_list_
 import CreateUser from "./Components/Create/CreateUser";
 import UserList from "./Components/List-item/UserList";
+//import category add_list
+import CreateCategory from "./Components/Create/CreateCategory";
+import CategoryList from "./Components/List-item/CategoryList";
 
 function App() {
   return (
@@ -9,11 +13,21 @@ function App() {
         <div>
           <CreateUser />
         </div>
-        <div>
+         <div>
           <UserList />
-        </div>
+          </div>
       </div>
+    <div>
+        <div>
+          <CreateCategory />
     </div>
+ 
+       <div>
+          <CategoryList />
+    </div>
+    </div>
+
+   </div>
   );
 }
 
