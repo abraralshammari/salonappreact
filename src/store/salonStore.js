@@ -74,6 +74,8 @@ class SalonStore {
 
       // fetchUser: action,
       // fetchCategory: action,
+      // addCategory: action,
+      // addUser: action,
 
       addUser: action,
       addCategory: action,
@@ -87,7 +89,8 @@ class SalonStore {
 const salonStore = new SalonStore();
 
 // salonStore.fetchCategory();
-
 // salonStore.fetchUser();
+// salonStore.addCategory();
+// salonStore.addUser();
 
 export default salonStore;
