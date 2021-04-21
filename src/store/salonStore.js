@@ -3,7 +3,6 @@ import { action, makeObservable, observable } from "mobx";
 import user from "../user";
 import category from "../category";
 
-
 class SalonStore {
   user = user;
   category = category;
@@ -17,10 +16,16 @@ class SalonStore {
   //     }
   //   };
 
+  //   addUser = async () => {
+  //     try {
+  //       const response = await axios.post("http://localhost:8000/user");
+  //       this.user = response.data;
+  //     } catch (error) {
+  //       console.error("addUser  -> response", error);
+  //     }
+  //   };
 
-
-
-//   fetchCategory = async () => {
+  //   fetchCategory = async () => {
   //     try {
   //       const response = await axios.get("http://localhost:8000");
   //       this.category = response.data;
@@ -29,6 +34,14 @@ class SalonStore {
   //     }
   //   };
 
+  //   addCategory = async () => {
+  //     try {
+  //       const response = await axios.post("http://localhost:8000/??");
+  //       this.category = response.data;
+  //     } catch (error) {
+  //       console.error("addCategory  -> response", error);
+  //     }
+  //   };
 
   addUser = (data) => {
     let newUser = data;
@@ -40,8 +53,9 @@ class SalonStore {
 
   removeUser = (userId) => {
     this.user = this.user.filter((us) => us.id !== userId);
-  
-    addCategory = (data) => {
+  };
+
+  addCategory = (data) => {
     let newCategory = data;
     newCategory.id = this.category.length + 1;
     console.log(newCategory);
@@ -51,6 +65,7 @@ class SalonStore {
 
   removeCategory = (categoryId) => {
     this.category = this.category.filter((cat) => cat.id !== categoryId);
+  };
 
   constructor() {
     makeObservable(this, {
@@ -65,7 +80,6 @@ class SalonStore {
 
       removeUser: action,
       removeCategory: action,
-
     });
   }
 }
@@ -75,6 +89,5 @@ const salonStore = new SalonStore();
 // salonStore.fetchCategory();
 
 // salonStore.fetchUser();
-
 
 export default salonStore;
